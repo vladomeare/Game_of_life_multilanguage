@@ -13,7 +13,7 @@ do
 	RUN=$(python3 $CURRENT_DIR"/../python/html_builder.py")
 	sleep 3
 	echo "html-page building: 200"
-	echo "$RUN"
+	echo "run code: $RUN"
 done
 
 echo "exit"
