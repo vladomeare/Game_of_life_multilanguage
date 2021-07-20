@@ -16,8 +16,10 @@ do
 	echo "run code: $RUN"
 done
 
+if [$RUN -eq 0]
 echo "exit"
-
-exec $CURRENT_DIR"/game_of_life_script.sh"
-
-echo "error"
+ exec $CURRENT_DIR"/game_of_life_script.sh"
+ exit
+else
+ echo "error in game of life!"
+fi
