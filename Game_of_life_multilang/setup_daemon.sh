@@ -8,7 +8,7 @@ Description=Daemon for game of life
 
 [Service]
 EOF
-echo "ExecStart="$P"/script/game_of_life_script.sh" >> etc/systemd/system/Game_of_life.service
+echo "ExecStart="$P"/script/game_of_life_script.sh" >> /etc/systemd/system/Game_of_life.service
 cat >> /etc/systemd/system/Game_of_life.service << EOF
 Restart=always
 
