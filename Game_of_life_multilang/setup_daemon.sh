@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x ./script/game_of_life_script.sh
+
 P=$( pwd )
 
 cat > /etc/systemd/system/Game_of_life.service << EOF
