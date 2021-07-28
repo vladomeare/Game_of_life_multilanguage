@@ -1,14 +1,18 @@
 #!/bin/bash
 
-PATH=$( pwd )
+P=$( pwd )
 
 cat > /etc/systemd/system/Game_of_life.service << EOF
-/[Unit]
+[Unit]
 Description=Daemon for game of life
-/[Service]
-ExecStart= $PATH
+
+[Service]
+EOF
+echo "ExecStart="$P"/script/game_of_life_script.sh" >> etc/systemd/system/Game_of_life.service
+cat >> /etc/systemd/system/Game_of_life.service << EOF
 Restart=always
-/[Install]
+
+[Install]
 WantedBy=multi-user.target
 EOF
 
