@@ -20,5 +20,5 @@ EOF
 
 chmod 664 /etc/systemd/system/Game_of_life.service
 systemctl daemon-reload 
-systemctl enable --now /etc/systemd/system/Game_of_life.service
+systemctl start Game_of_life.service
 systemctl status /etc/systemd/system/Game_of_life.service
