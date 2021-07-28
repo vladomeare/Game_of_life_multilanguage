@@ -8,7 +8,7 @@ from datetime import datetime
 
 datafile = "../main_data/create_field_data.txt" 
 filename = "../main_data/field.txt"
-html = "../project.html"
+html = "../index.html"
 
 try:
 	f = open(datafile,'r')
