@@ -12,7 +12,7 @@ echo "Field generate: 200"
 while (($RUN == 1))
 do
 	$CURRENT_DIR"/../Cpp/game_of_life"
-	RUN=$(python3 $CURRENT_DIR"/../python/html_builder.py")
+	RUN=$(python3 $CURRENT_DIR"../python/html_builder.py")
 	sleep 3
 	echo "html-page building: 200"
 	echo "run code: $RUN"
