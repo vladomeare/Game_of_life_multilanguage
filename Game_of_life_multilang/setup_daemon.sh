@@ -4,7 +4,7 @@ P=$( pwd )
 
 echo "CURRENT_DIR=/""$P"/"" >> ./script/game_of_life_script.sh
 
-cat >> ./scipt/game_of_life_script.sh << EOF
+cat >> ./script/game_of_life_script.sh << EOF
 
 python3 $CURRENT_DIR"/../python/generate_zerofield.py"
 echo "Field generate: 200"
