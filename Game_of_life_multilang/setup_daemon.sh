@@ -2,25 +2,25 @@
 
 P=$( pwd )
 
-echo "CURRENT_DIR=/""$P"/"" >> ./script/game_of_life_script.sh
+echo "CURRENT_DIR=""$P"/"" >> ./script/game_of_life_script.sh
 
 cat >> ./script/game_of_life_script.sh << EOF
 
-python3 $CURRENT_DIR"/../python/generate_zerofield.py"
+python3 $P/python/generate_zerofield.py
 echo "Field generate: 200"
 
-while (($RUN == 1))
+while ((/$RUN == 1))
 do
-	$CURRENT_DIR"/../Cpp/game_of_life"
-	RUN=$(python3 $CURRENT_DIR"../python/html_builder.py")
+	$P/Cpp/game_of_life
+	RUN=/$(python3 "$P/python/html_builder.py")
 	sleep 3
 	echo "html-page building: 200"
-	echo "run code: $RUN"
+	echo "run code: /$RUN"
 done
 
-if [$RUN -eq 0]
+if [/$RUN -eq 0]
 echo "exit"
- exec $CURRENT_DIR"/game_of_life_script.sh"
+ exec $P/game_of_life_script.sh
  exit
 else
  echo "error in game of life!"
